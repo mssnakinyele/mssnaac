@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
+
 body {
   margin: 0;
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 20px;
+}
+
+h2 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 45px;
+  margin: 0;
 }
 
 p {
@@ -24,4 +32,16 @@ li {
   padding: 0.8rem 4px;
   border: none;
   font-size: 25px;
+}
+
+.btn-green-shade {
+  font: inherit;
+  background: none;
+  color: #007300;
+  border: 2px solid #bddcbd;
+  border-radius: 5px;
+  padding: 0.5rem 2.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
 }
