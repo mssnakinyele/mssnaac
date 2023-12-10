@@ -6,6 +6,8 @@ import Location from './Location';
 import styles from './Home.module.css';
 import Testimonials from './Testimonials';
 import Press from './Press';
+import Project from './Project';
+import Faq from './Faq';
 
 function Home() {
   return (
@@ -16,6 +18,8 @@ function Home() {
       <Location />
       <Testimonials />
       <Press />
+      <Project />
+      <Faq />
     </main>
   );
 }
