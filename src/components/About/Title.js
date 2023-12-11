@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Title = ({ title, text, text2, text3 }) => (
+const Title = ({
+  title, text, text2, text3,
+}) => (
   <div>
     <h2 className="text-[35px] font-bold pb-3 font">{title}</h2>
     <div>

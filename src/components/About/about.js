@@ -2,6 +2,7 @@ import React from 'react';
 import Title from './Title';
 import Page from '../../utils/page';
 import Navbar from '../Navbar';
+import Contact from '../Home/Contact';
 
 function About() {
   return (
@@ -43,9 +44,9 @@ function About() {
       </div>
 
       <div className="bg-brand-green pt-8 pb-[73px] px-[104px]">
-        <p className="text-amber-600 font-bold text-[35px] text-center leading-[65px] pb-[50px] font">
+        <h2 className="font-bold text-[35px] text-center leading-[65px] pb-[50px]">
           MSSNAAC Executive Committee 2021/2022
-        </p>
+        </h2>
 
         <Page itemsPerPage={8} />
       </div>
@@ -68,6 +69,7 @@ function About() {
 
         <img src="Member.png" alt="Activites" className="object-contain" />
       </div>
+      <Contact />
     </>
   );
 }

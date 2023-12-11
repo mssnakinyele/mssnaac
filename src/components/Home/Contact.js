@@ -7,7 +7,7 @@ import { FiInstagram } from 'react-icons/fi';
 
 function Contact() {
   return (
-    <footer className="m-8 bg-[#007300] text-white">
+    <footer className="mx-[50px] bg-[#007300] text-white p-2">
       <div className="flex flex-row m-8">
         <div className="flex-auto basis-1/2">
           <h2 className="font-extrabold">Contact Us</h2>
