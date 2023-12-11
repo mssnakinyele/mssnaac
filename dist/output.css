@@ -599,8 +599,9 @@ video {
   margin: 2rem;
 }
 
-.mt-8 {
-  margin-top: 2rem;
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .mb-2 {
@@ -619,8 +620,24 @@ video {
   display: none;
 }
 
-.grow {
-  flex-grow: 1;
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.basis-1\/2 {
+  flex-basis: 50%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .items-center {
@@ -635,8 +652,25 @@ video {
   justify-content: space-between;
 }
 
-.justify-items-center {
-  justify-items: center;
+.gap-32 {
+  gap: 8rem;
+}
+
+.gap-40 {
+  gap: 10rem;
+}
+
+.gap-44 {
+  gap: 11rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-t-2xl {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .border-2 {
@@ -647,13 +681,39 @@ video {
   border-bottom-width: 2px;
 }
 
-.bg-\[\] {
-  background-color: ;
+.bg-\[\#007300\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 115 0 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#80B980\] {
+.bg-\[\#CDCFAF\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(128 185 128 / var(--tw-bg-opacity));
+  background-color: rgb(205 207 175 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#D9CDBE\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 205 190 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#E6F4E6\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(230 244 230 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#F1E2C8\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 226 200 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#F5E5D9\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 229 217 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#F6D9D9\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 217 217 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#FAFDFA\] {
@@ -661,12 +721,22 @@ video {
   background-color: rgb(250 253 250 / var(--tw-bg-opacity));
 }
 
+.object-contain {
+  object-fit: contain;
+}
+
 .p-8 {
   padding: 2rem;
 }
 
-.p-4 {
-  padding: 1rem;
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .px-4 {
@@ -674,22 +744,95 @@ video {
   padding-right: 1rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
+.px-\[104px\] {
+  padding-left: 104px;
+  padding-right: 104px;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-\[105px\] {
+  padding-top: 105px;
+  padding-bottom: 105px;
+}
+
+.py-\[58px\] {
+  padding-top: 58px;
+  padding-bottom: 58px;
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+
+.pb-4 {
   padding-bottom: 1rem;
+}
+
+.pb-\[50px\] {
+  padding-bottom: 50px;
+}
+
+.pb-\[73px\] {
+  padding-bottom: 73px;
+}
+
+.pl-\[50px\] {
+  padding-left: 50px;
+}
+
+.pt-8 {
+  padding-top: 2rem;
 }
 
 .text-center {
   text-align: center;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-\[35px\] {
+  font-size: 35px;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
 .font-extrabold {
   font-weight: 800;
 }
 
-.text-orange-600 {
-  --tw-text-opacity: 1;
-  color: rgb(234 88 12 / var(--tw-text-opacity));
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.leading-\[50px\] {
+  line-height: 50px;
+}
+
+.leading-\[65px\] {
+  line-height: 65px;
 }
 
 .text-\[\#007300\] {
@@ -697,12 +840,19 @@ video {
   color: rgb(0 115 0 / var(--tw-text-opacity));
 }
 
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+.text-orange-600 {
+  --tw-text-opacity: 1;
+  color: rgb(234 88 12 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-amber-600 {
+  --tw-text-opacity: 1;
+  color: rgb(217 119 6 / var(--tw-text-opacity));
 }
 
 .duration-300 {
@@ -757,4 +907,8 @@ li {
   cursor: pointer;
   font-weight: 600;
   font-size: 16px;
+}
+
+.hover\:bg-transparent:hover {
+  background-color: transparent;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Title = ({ title, text, text2, text3 }) => (
   <div>
@@ -10,5 +11,13 @@ const Title = ({ title, text, text2, text3 }) => (
     </div>
   </div>
 );
+
+// props validation and typechecking
+Title.propTypes = {
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  text2: PropTypes.string.isRequired,
+  text3: PropTypes.string.isRequired,
+};
 
 export default Title;
