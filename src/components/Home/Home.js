@@ -8,7 +8,6 @@ import Testimonials from './Testimonials';
 import Press from './Press';
 import Project from './Project';
 import Faq from './Faq';
-import Contact from './Contact';
 
 function Home() {
   return (
@@ -21,7 +20,6 @@ function Home() {
       <Press />
       <Project />
       <Faq />
-      <Contact />
     </main>
   );
 }

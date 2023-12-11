@@ -51,13 +51,12 @@ function Faq() {
       <p className="text-center">Find answers to commonly asked questions about our society.</p>
       <ul className="m-8 bg-[#FAFDFA]">
         {data.map((item, id) => (
-          <li key={item.id} className="border-b-2 px-4 mb-2 ">
-            <div className="flex items-center justify-between cursor-pointer" onClick={() => toggle(id)}>
-              <p className="font-semibold">{item.question}</p>
+          <li key={item.id} className="border-b-2 px-4 mb-2">
+            <div className="flex items-center justify-between" onClick={() => toggle(id)}>
+              <p>{item.question}</p>
               <span className="text-[#007300]">
                 {selected === id ? <FaCircleArrowDown /> : <FaCircleArrowRight />}
-              </span>
-              {' '}
+                </span>{' '}
             </div>
             <p className={`text-orange-600 ${selected === id ? 'block' : 'hidden ease-in duration-300'}`}>{item.answer}</p>
           </li>
