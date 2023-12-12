@@ -74,4 +74,5 @@ const Page = ({ itemsPerPage }) => {
   );
 };
 
+
 export default Page;
