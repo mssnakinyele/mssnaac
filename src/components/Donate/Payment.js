@@ -79,7 +79,7 @@ function Payment() {
         <p>
           Donate
           {' '}
-          {`N${existingData}`}
+          {`${existingData === '1000000' ? '1Million' : `N${existingData}`}`}
         </p>
       </div>
       <div id="2" className="menu invisible">2</div>
