@@ -54,9 +54,11 @@ function Donate() {
 }
             </ul>
             <form className="flex flex-col flex-start w-3/4">
-              <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} className="px-3 py-2 my-8 block w-full px-3 py-2 bg-white border border-slate-300 shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500" placeholder="Enter an amount here" />
-              <Link className={`text-center bg-[#007300] p-2 text-white ${amount === '' ? 'cursor-not-allowed disable opacity-75' : ''}`} to={`${amount === '' ? '/donate' : '/donate/details'}`} exact="true">
-                Donate
+              <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} className="px-3 py-2 my-8 block w-full px-3 pt-2 bg-white border border-slate-300 shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 " placeholder="Enter an amount here" min="100" max="1000000" />
+              <p className={`text-sm text-pink-600 pb-3 text-bold ${amount > 100 && amount < 1000000 ? 'hidden' : 'block'}`}>Please conduct transfers ranging from N100 to N1 million per transaction.</p>
+
+              <Link className={`text-center bg-[#007300] p-2 text-white ${amount < 100 || amount > 1000000 ? 'cursor-not-allowed disable opacity-75' : ''}`} to={`${amount < 100 || amount > 1000000 ? '/donate' : '/donate/details'}`} exact="true">
+                <input type="submit" />
               </Link>
             </form>
           </div>
