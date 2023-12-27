@@ -23,9 +23,9 @@ function Showcase() {
           <button type="button" className="btn-green">Join us</button>
           <div>
             <div className={styles.showcase}>
-              <img src="Rectangle.png" alt="show_img" className={styles.grey} />
-              <img src="Rectangle2.png" alt="show_img" />
-              <img src="Rectangle3.png" alt="show_img" className={styles.grey} />
+              <img src="/imgs/Rectangle.png" alt="show_img" className={styles.grey} />
+              <img src="/imgs/Rectangle2.png" alt="show_img" />
+              <img src="/imgs/Rectangle3.png" alt="show_img" className={styles.grey} />
             </div>
             <div className={styles.card}>
               <div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '../Navbar';
+import Navbar from '../Navbar/Navbar';
 
 const data = [
   {
@@ -35,7 +35,7 @@ function Donate() {
       <Navbar />
       <div className="grid grid-cols-2 min-h-fit">
         <div className="mt-[50px]">
-          <img src="multiple.svg" alt="multiple_reward" className="w-2/3" />
+          <img src="/svgs/multiple.svg" alt="multiple_reward" className="w-2/3" />
         </div>
         <div className="bg-[#E6F4E6] px-[50px] pt-[50px]">
           <div className="w-1/2">

@@ -10,7 +10,7 @@ function Card() {
 
   return (
     <div className={styles.card}>
-      <img src="press.svg" alt="show_img" />
+      <img src="/svgs/press.svg" alt="show_img" />
       <p>
         {currMonth}
         {' '}

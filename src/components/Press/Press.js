@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Press.module.css';
-import Card from './Card';
+import Card from '../Card/Card';
 
 function Press() {
   return (

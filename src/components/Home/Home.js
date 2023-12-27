@@ -1,14 +1,15 @@
-import React from 'react';
-import Navbar from '../Navbar';
-import Section from './Section';
-import Showcase from './Showcase';
-import Location from './Location';
-import styles from './Home.module.css';
-import Testimonials from './Testimonials';
-import Press from './Press';
-import Project from './Project';
-import Faq from './Faq';
-import Contact from './Contact';
+import React from "react";
+import Navbar from "../Navbar/Navbar";
+import Section from "../Section/Section";
+import Showcase from "../Showcase/Showcase";
+import Location from "../Location/Location";
+import Testimonials from "../Testimonials/Testimonials";
+import Press from "../Press/Press";
+import Project from "../Project/Project";
+import Faq from "../Faq/Faq";
+import Contact from "../Contact/Contact";
+
+import styles from "./Home.module.css";
 
 function Home() {
   return (
