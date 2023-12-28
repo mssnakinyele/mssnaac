@@ -32,7 +32,6 @@ function Donate() {
   localStorage.setItem('amount', JSON.stringify(amount));
   return (
     <>
-      <Navbar />
       <div className="grid grid-cols-2 min-h-fit">
         <div className="mt-[50px]">
           <img src="/svgs/multiple.svg" alt="multiple_reward" className="w-2/3" />
