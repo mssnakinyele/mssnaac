@@ -1,10 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Donate from "./components/Donate/Donate";
-import Detail from "./components/Donate/Detail";
-import MainLayout from "./Layouts/MainLayout";
+import { Home, About, Donate, Detail, MainLayout, Error404 } from "./views";
 
 const App = () => (
   <div className='App'>
@@ -14,7 +10,7 @@ const App = () => (
         <Route path='/about' element={<About />} />
         <Route path='/donate' element={<Donate />} />
         <Route path='/donate/details' element={<Detail />} />
-        <Route path='*' element={<h1>404 Not Found</h1>} />
+        <Route path='*' element={<Error404 />} />
       </Route>
     </Routes>
   </div>

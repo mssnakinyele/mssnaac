@@ -1,9 +1,10 @@
 import { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
-import styles from "./Navbar.module.css";
+import { Disclosure, Transition } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+
 import { routes } from "../../routes";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import styles from "./Navbar.module.css";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -84,7 +85,7 @@ function Navbar() {
             leaveTo='transform opacity-0 scale-95'
           >
             <Disclosure.Panel className='md:hidden w-full h-auto'>
-              <div className='space-y-2 pb-3 pt-2'>
+              <div className='space-y-2 pb-3 pt-2 '>
                 {routes.map((route) => (
                   <Disclosure.Button
                     key={route.path}

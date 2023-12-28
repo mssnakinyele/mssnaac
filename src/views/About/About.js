@@ -1,8 +1,9 @@
 import React from 'react';
-import Title from './Title';
-import Page from '../../utils/page';
-import Navbar from '../Navbar/Navbar';
-import Contact from '../Contact/Contact';
+
+import Title from './Title'
+import Page from '../../utils/page'
+import {Contact} from '../../components'
+
 
 function About() {
   return (
