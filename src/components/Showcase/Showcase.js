@@ -1,31 +1,40 @@
-import React from 'react';
-import styles from './Showcase.module.css';
+import React from "react";
+import styles from "./Showcase.module.css";
 
 function Showcase() {
   return (
     <>
       <section className={styles.sectionOne}>
         <header>
-          <h1 className={styles.h1}>
-            Building
-            {' '}
-            <span className={styles.highlight}>stronger</span>
-            {' '}
+          <h1
+            className={`${styles.h1} text-3xl lg:text-5xl md:text-4xl lg:leading-normal`}
+          >
+            Building <span className={styles.highlight}>stronger</span>{" "}
             communities
             <br />
             of Muslim students
           </h1>
-          <p>
-            Discover a network of Muslim students dedicated to building
-            <br />
-            a better future for the Ummah.
+          <p className=' text-sm lg:text-lg  px-4 mx-auto'>
+            Discover a network of Muslim students dedicated to{" "}
+            <br className='hidden lg:inline' />
+            building a better future for the Ummah.
           </p>
-          <button type="button" className="btn-green">Join us</button>
+          <button type='button' className='btn-green rounded-md my-6'>
+            Join us
+          </button>
           <div>
             <div className={styles.showcase}>
-              <img src="/imgs/Rectangle.png" alt="show_img" className={styles.grey} />
-              <img src="/imgs/Rectangle2.png" alt="show_img" />
-              <img src="/imgs/Rectangle3.png" alt="show_img" className={styles.grey} />
+              <img
+                src='/imgs/Rectangle.png'
+                alt='show_img'
+                className={styles.grey}
+              />
+              <img src='/imgs/Rectangle2.png' alt='show_img' />
+              <img
+                src='/imgs/Rectangle3.png'
+                alt='show_img'
+                className={styles.grey}
+              />
             </div>
             <div className={styles.card}>
               <div>
@@ -51,7 +60,6 @@ function Showcase() {
               </div>
             </div>
           </div>
-
         </header>
       </section>
     </>

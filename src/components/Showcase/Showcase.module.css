@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@400;500&display=swap");
 
 .sectionOne {
   text-align: center;
@@ -9,22 +9,21 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  /* font-size: 1.2rem; */
 }
 
 .h1 {
-  font-family: 'Chakra Petch', sans-serif;
-  font-size: 75px;
+  font-family: "Chakra Petch", sans-serif;
+  /* font-size: 55px; */
+  /* line-height: 65px; */
   font-weight: 700;
-  margin: 20px 0;
+  margin-top: 50px;
+  margin-bottom: 15px;
 }
 
 .highlight {
   color: #007300;
-}
-
-.sectionOne button {
-  margin-top: 15px;
-  margin-bottom: 30px;
 }
 
 .sectionOne button:hover {
@@ -37,6 +36,7 @@ header {
   grid-template-columns: repeat(3, 1fr);
   box-sizing: border-box;
   width: 100%;
+  margin-top: 10px;
 }
 
 .showcase img {
@@ -64,7 +64,7 @@ header {
   text-align: left;
   padding: 40px 0;
   width: 100%;
-  font-family: 'Chakra Petch', sans-serif;
+  font-family: "Chakra Petch", sans-serif;
 }
 
 .card div h2 {
