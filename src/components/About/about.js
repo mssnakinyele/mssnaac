@@ -7,7 +7,6 @@ import Contact from '../Contact/Contact';
 function About() {
   return (
     <>
-      <Navbar />
       <div className="bg-brand-green flex justify-between items-center gap-32 pl-[50px] py-12">
         <div className=" flex-1">
           <Title

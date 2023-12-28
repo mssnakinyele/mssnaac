@@ -53,6 +53,7 @@ li {
 
 .active {
   color: #007300;
+  border-bottom: 2px solid #007300;
 }
 
 .btn-green {
