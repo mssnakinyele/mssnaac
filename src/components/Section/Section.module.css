@@ -1,32 +1,14 @@
 .about {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
   text-align: left;
-  width: 90%;
-  margin: auto;
+  width: 100%;
 }
 
 .about h2 {
-  font-family: 'Chakra Petch', sans-serif;
-  font-size: 45px;
-  margin: 0;
+  font-family: "Chakra Petch", sans-serif;
 }
 
-.about p {
-  line-height: 2rem;
-}
-
-.about div {
-  flex-basis: 100%;
-}
-
-.about div:first-child {
-  display: flex;
-  flex-direction: column;
-}
-
-.about div img {
-  width: 80%;
-  height: auto;
+.about button {
+  margin-top: 1rem;
 }
