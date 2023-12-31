@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./Press.module.css";
 import Card from "../Card/Card";
-import CustomSlider from "../CustomSlider/CustomSlider";
+import CustomSlider from "../Slider/CustomSlider";
 
 function Press() {
   return (
-    <section className=' px-6'>
+    <section className='bg-[rgba(250, 253, 250, 1)] p-[2.25rem]'>
       <div
         className={`${styles.press} flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4 md:px-6`}
       >

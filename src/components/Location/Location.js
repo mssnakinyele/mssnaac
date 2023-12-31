@@ -3,7 +3,7 @@ import styles from "./Location.module.css";
 
 function Location() {
   return (
-    <section className={`${styles.section} my-4 xl:mt-0 px-6 md:px-12`}>
+    <section className={`${styles.section} py-[3.5rem] px-6 md:px-12`}>
       <div className='flex items-center my-2'>
         <h2 className='font-semibold text-3xl md:text-4xl leading-normal'>
           Societies

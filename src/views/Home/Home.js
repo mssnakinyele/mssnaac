@@ -7,8 +7,8 @@ import {
   Testimonials,
   Press,
   Project,
+  Donate,
   Faq,
-  Contact,
 } from "../../components";
 
 import styles from "./Home.module.css";
@@ -22,8 +22,8 @@ function Home() {
       <Testimonials />
       <Press />
       {/* <Project /> */}
+      <Donate />
       <Faq />
-      <Contact />
     </main>
   );
 }

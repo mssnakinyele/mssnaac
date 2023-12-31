@@ -34,7 +34,7 @@ const CustomSlider = ({ config, children }) => {
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
-    speed: 2000,
+    speed:  config?.type === "testimonial" ? 2000 : 500,
     autoplay: config?.type === "testimonial" ? true : false,
     autoplaySpeed: 0,
     cssEase: config?.type === "testimonial" ? "linear" : "ease-in-out",

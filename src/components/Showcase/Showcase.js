@@ -12,28 +12,30 @@ function Showcase() {
     <>
       <section className={`${styles.sectionOne} `}>
         <header>
-          <h1
-            className={`${styles.h1} text-3xl lg:text-5xl md:text-4xl lg:leading-normal`}
-          >
-            Building{" "}
-            <TypingText
-              texts={["stronger", "resilient", "empowered"]}
-              wrapperClassName={styles.highlight}
-            />
-            communities
-            <br />
-            of Muslim students
-          </h1>
-          <p className=' text-sm lg:text-lg  px-4 mx-auto'>
-            Discover a network of Muslim students dedicated to{" "}
-            <br className='hidden lg:inline' />
-            building a better future for the Ummah.
-          </p>
-          <button type='button' className='btn-green rounded-md my-6'>
-            Join us
-          </button>
+          <div className='flex justify-center items-center flex-col'>
+            <h1
+              className={`${styles.h1} text-3xl lg:text-5xl md:text-4xl lg:leading-normal`}
+            >
+              Building{" "}
+              <TypingText
+                texts={["stronger", "resilient", "empowered"]}
+                wrapperClassName={styles.highlight}
+              />
+              communities
+              <br />
+              of Muslim students
+            </h1>
+            <p className=' text-sm lg:text-lg  px-4 mx-auto'>
+              Discover a network of Muslim students dedicated to{" "}
+              <br className='hidden lg:inline' />
+              building a better future for the Ummah.
+            </p>
+            <button type='button' className='btn-green rounded-md my-8'>
+              Join us
+            </button>
+          </div>
           <div>
-            <div className=' text-white w-full grid grid-cols-3 ' ref={ref}>
+            <div className=' text-white w-full grid grid-cols-3 '>
               <div className={styles.showcaseItem}>
                 <img
                   src='/imgs/Rectangle.png'
@@ -42,7 +44,7 @@ function Showcase() {
                   loading='lazy'
                 />
                 <div className={styles.counter}>
-                  <h2>
+                  <h2 ref={ref}>
                     <CountUp end={inView ? 10 : 0} duration={2} />+
                   </h2>
                   <p>
@@ -52,7 +54,13 @@ function Showcase() {
                 </div>
               </div>
               <div className={styles.showcaseItem}>
-                <img src='/imgs/Rectangle2.jpg' alt='show_img' loading='lazy' />
+                <div>
+                  <img
+                    src='/imgs/Rectangle2.jpg'
+                    alt='show_img'
+                    loading='lazy'
+                  />
+                </div>
                 <div className={styles.counter}>
                   <h2>
                     <CountUp end={inView ? 100 : 0} duration={2} />+

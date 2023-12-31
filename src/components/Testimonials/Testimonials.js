@@ -3,13 +3,13 @@ import { v4 as uuid } from "uuid";
 import Avatar from "react-avatar";
 
 import styles from "./Testimonials.module.css";
-import CustomSlider from "../CustomSlider/CustomSlider";
+import CustomSlider from "../Slider/CustomSlider";
 
 import tempData from "../../data/testimonialData";
 
 function Testimonials() {
   return (
-    <section className={`${styles.testimony} my-4`}>
+    <section className={`${styles.testimony} mt-4 py-[3rem]`}>
       <h2 className='text-3xl lg:text-4xl font-bold'>Testimonials</h2>
       <p className='text-sm lg:text-lg px-4'>
         Hear from individuals who value being part of our society.
