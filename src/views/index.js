@@ -4,6 +4,6 @@ import Donate from './Donate/Donate';
 import Detail from './Donate/Detail';
 import Error404 from './Error/Error404';
 
-import MainLayout from '../layouts/MainLayout';
+import MainLayout from '../Layouts/MainLayout';
 
 export { Home, About, Donate, Detail, MainLayout, Error404 };
