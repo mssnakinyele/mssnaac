@@ -6,7 +6,7 @@ import {
   Location,
   Testimonials,
   Press,
-  Project,
+  // Project,
   Donate,
   Faq,
 } from "../../components";
