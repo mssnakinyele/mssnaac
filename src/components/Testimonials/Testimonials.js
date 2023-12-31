@@ -4,16 +4,21 @@ import Avatar from "react-avatar";
 
 import styles from "./Testimonials.module.css";
 import CustomSlider from "../Slider/CustomSlider";
+import SlideIn from "../Animations/SlideIn";
 
 import tempData from "../../data/testimonialData";
 
 function Testimonials() {
   return (
     <section className={`${styles.testimony} mt-4 py-[3rem]`}>
-      <h2 className='text-3xl lg:text-4xl font-bold'>Testimonials</h2>
-      <p className='text-sm lg:text-lg px-4'>
-        Hear from individuals who value being part of our society.
-      </p>
+      <SlideIn from='left'>
+        <h2 className='text-3xl lg:text-4xl font-bold'>Testimonials</h2>
+      </SlideIn>
+      <SlideIn from='right'>
+        <p className='text-sm lg:text-lg px-4'>
+          Hear from individuals who value being part of our society.
+        </p>
+      </SlideIn>
       <CustomSlider config={{ type: "testimonial" }}>
         {tempData.map((item) => (
           <div key={uuid()} className={styles.card}>

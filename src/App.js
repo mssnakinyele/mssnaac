@@ -8,10 +8,11 @@ const App = () => {
   const location = useLocation();
 
   useEffect(() => {
-    animateScroll.scrollToTop({
-      duration: 1500,
-      smooth: "easeInOutQuart",
-    });
+    if (location.pathname !== "/")
+      animateScroll.scrollToTop({
+        duration: 1500,
+        smooth: "easeInOutQuart",
+      });
   }, [location.pathname]);
 
   return (

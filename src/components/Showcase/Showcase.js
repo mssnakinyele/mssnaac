@@ -4,15 +4,21 @@ import CountUp from "react-countup";
 import TypingText from "../TypingText";
 
 import styles from "./Showcase.module.css";
+import SlideIn from "../Animations/SlideIn";
 
 function Showcase() {
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
 
   return (
     <>
       <section className={`${styles.sectionOne} `}>
         <header>
-          <div className='flex justify-center items-center flex-col'>
+          <SlideIn
+            from='top'
+            classNames='flex justify-center items-center flex-col'
+          >
             <h1
               className={`${styles.h1} text-3xl lg:text-5xl md:text-4xl lg:leading-normal`}
             >
@@ -25,16 +31,18 @@ function Showcase() {
               <br />
               of Muslim students
             </h1>
-            <p className=' text-sm lg:text-lg  px-4 mx-auto'>
+          </SlideIn>
+          <SlideIn from='left ' classNames='px-4 mx-auto'>
+            <p className=' text-sm lg:text-lg  '>
               Discover a network of Muslim students dedicated to{" "}
               <br className='hidden lg:inline' />
               building a better future for the Ummah.
             </p>
-            <button type='button' className='btn-green rounded-md my-8'>
+            <button type='button' className='btn-green rounded-md my-8 mx-auto'>
               Join us
             </button>
-          </div>
-          <div>
+          </SlideIn>
+          <SlideIn from='top'>
             <div className=' text-white w-full grid grid-cols-3 '>
               <div className={styles.showcaseItem}>
                 <img
@@ -89,7 +97,7 @@ function Showcase() {
                 </div>
               </div>
             </div>
-          </div>
+          </SlideIn>
         </header>
       </section>
     </>
