@@ -1,45 +1,35 @@
-import React from 'react';
-import { v4 as uuid } from 'uuid';
+import React from "react";
+import { v4 as uuid } from "uuid";
+import Avatar from "react-avatar";
 
-import styles from './Testimonials.module.css';
+import styles from "./Testimonials.module.css";
+import CustomSlider from "../Slider/CustomSlider";
+
+import tempData from "../../data/testimonialData";
 
 function Testimonials() {
-  const myArray = [{
-    name: 'Aisha Zayad',
-    description: 'I\'ve been a member of this society for a year now.',
-    description2: 'The events are always engaging and informative.',
-  },
-  {
-    name: 'Jagun Ashraf',
-    description: 'I\'ve been a member of this society for a year now.',
-    description2: 'The events are always engaging and informative.',
-  },
-  {
-    name: 'Umar Fadhl',
-    description: 'I\'ve been a member of this society for a year now.',
-    description2: 'The events are always engaging and informative.',
-  }];
   return (
-    <section className={styles.testimony}>
-      <h2>Testimonials</h2>
-      <p>Hear from individuals who value being part of our society.</p>
-      <div className={styles.testimonydiv}>
-        {
-      myArray.map((item) => (
-        <div key={uuid()} className={styles.card}>
-          <div className={styles.icon}>
-            <img src="/svgs/microphone.svg" alt="icon" />
+    <section className={`${styles.testimony} mt-4 py-[3rem]`}>
+      <h2 className='text-3xl lg:text-4xl font-bold'>Testimonials</h2>
+      <p className='text-sm lg:text-lg px-4'>
+        Hear from individuals who value being part of our society.
+      </p>
+      <CustomSlider config={{ type: "testimonial" }}>
+        {tempData.map((item) => (
+          <div key={uuid()} className={styles.card}>
+            <Avatar
+              name={item.name}
+              size='75'
+              round={true} // Set to true for a round avatar
+            />
+            <h3>{item.name}</h3>
+            <p>{item.description}</p>
+            <br />
+            <p>{item.description2}</p>
           </div>
-          <h3>{item.name}</h3>
-          <p>{item.description}</p>
-          <br />
-          <p>{item.description2}</p>
-        </div>
-      ))
-      }
-      </div>
+        ))}
+      </CustomSlider>
     </section>
-
   );
 }
 

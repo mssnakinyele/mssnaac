@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@400;500&display=swap");
 
 .sectionOne {
   text-align: center;
@@ -8,28 +8,18 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .h1 {
-  font-family: 'Chakra Petch', sans-serif;
-  font-size: 75px;
+  font-family: "Chakra Petch", sans-serif;
   font-weight: 700;
-  margin: 20px 0;
+  margin-top: 50px;
+  margin-bottom: 25px;
 }
 
 .highlight {
   color: #007300;
-}
-
-.sectionOne button {
-  margin-top: 15px;
-  margin-bottom: 30px;
-}
-
-.sectionOne button:hover {
-  cursor: pointer;
-  opacity: 0.9;
 }
 
 .showcase {
@@ -37,24 +27,48 @@ header {
   grid-template-columns: repeat(3, 1fr);
   box-sizing: border-box;
   width: 100%;
-}
-
-.showcase img {
-  width: 100%;
-  height: 100%;
+  margin-top: 10px;
 }
 
 .grey {
   filter: grayscale(1);
 }
 
-.card {
-  background-color: #007300;
-  color: #fff;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.showcaseItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  border-left: #fff 4px solid;
+  height: fit-content;
 }
+
+.showcaseItem img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+@media (min-width: 610px) {
+  .showcaseItem img {
+    height: 180px;
+  }
+}
+
+@media (min-width: 768px) {
+  .showcaseItem img {
+    height: 230px;
+  }
+
+}
+
+@media (min-width: 1124px) {
+  .showcaseItem img {
+    height: 260px;
+  }
+}
+
 
 .card div {
   display: flex;
@@ -64,7 +78,7 @@ header {
   text-align: left;
   padding: 40px 0;
   width: 100%;
-  font-family: 'Chakra Petch', sans-serif;
+  font-family: "Chakra Petch", sans-serif;
 }
 
 .card div h2 {
@@ -76,5 +90,78 @@ header {
   line-height: 1.2rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 8px;
+}
+
+.counter {
+  background-color: #007300;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter h2 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem; /* Base font size */
+  font-weight: 600;
+}
+
+.counter p {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  font-size: 0.75rem;
+  padding: 0 1.2rem;
+  margin-bottom: 1rem;
+  line-height: normal;
+  gap: 5px;
+}
+
+.sho:first-child {
+  padding-left: 0;
+}
+
+@media (min-width: 640px) {
+  /* Small screens and above */
+  .counter h2 {
+    font-size: 1.25rem;
+  }
+  .counter p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Medium screens and above */
+  .counter {
+    padding: 1rem;
+    flex-direction: row;
+  }
+  .counter h2 {
+    font-size: 1.5rem;
+  }
+  .counter p {
+    margin-bottom: 0;
+    flex-direction: column;
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Large screens and above */
+  .counter h2 {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* Extra-large screens and above */
+  .counter h2 {
+    font-size: 2.25rem;
+  }
 }

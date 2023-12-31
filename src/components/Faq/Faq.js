@@ -1,66 +1,64 @@
-import React, { useState } from 'react';
-import { FaCircleArrowRight, FaCircleArrowDown } from 'react-icons/fa6';
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { scroller } from "react-scroll";
+
+import { Disclosure, Transition } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+
+import tempFaq from "../../data/faq";
 
 function Faq() {
-  const data = [
-    {
-      id: 1,
-      question: 'So you are curious. What do you need to know today, again? Pray tell, my dear?',
-      answer: 'The Muslim Students Association (MSA) is a student group at the University of Toronto St. George Campus. We are a group of Muslim students who strive to create a sense of community for Muslims on campus and provide opportunities for students to learn about Islam.',
-    },
-    {
-      id: 2,
-      question: 'So you are curious. What do you need to know today, again? Pray tell, my dear?',
-      answer: 'The Muslim Students Association (MSA) is a student group at the University of Toronto St. George Campus. We are a group of Muslim students who strive to create a sense of community for Muslims on campus and provide opportunities for students to learn about Islam.',
-    },
-    {
-      id: 3,
-      question: 'So you are curious. What do you need to know today, again? Pray tell, my dear?',
-      answer: 'The Muslim Students Association (MSA) is a student group at the University of Toronto St. George Campus. We are a group of Muslim students who strive to create a sense of community for Muslims on campus and provide opportunities for students to learn about Islam.',
-    },
-    {
-      id: 4,
-      question: 'So you are curious. What do you need to know today, again? Pray tell, my dear?',
-      answer: 'The Muslim Students Association (MSA) is a student group at the University of Toronto St. George Campus. We are a group of Muslim students who strive to create a sense of community for Muslims on campus and provide opportunities for students to learn about Islam.',
-    },
-    {
-      id: 5,
-      question: 'So you are curious. What do you need to know today, again? Pray tell, my dear?',
-      answer: 'The Muslim Students Association (MSA) is a student group at the University of Toronto St. George Campus. We are a group of Muslim students who strive to create a sense of community for Muslims on campus and provide opportunities for students to learn about Islam.',
-    },
-    {
-      id: 6,
-      question: 'So you are curious. What do you need to know today, again? Pray tell, my dear?',
-      answer: 'The Muslim Students Association (MSA) is a student group at the University of Toronto St. George Campus. We are a group of Muslim students who strive to create a sense of community for Muslims on campus and provide opportunities for students to learn about Islam.',
-    },
-  ];
+  const location = useLocation();
 
-  const [selected, setSelected] = useState(null);
-
-  const toggle = (i) => {
-    if (selected === i) {
-      return setSelected(null);
+  useEffect(() => {
+    if (location.state && location.state.scrollToFAQs) {
+      scroller.scrollTo("faqs", {
+        smooth: true,
+        duration: 1500,
+      });
     }
-
-    setSelected(i);
-  };
+  }, [location.state]);
 
   return (
-    <section className="p-8">
-      <h2 className="text-center font-extrabold">Faq</h2>
-      <p className="text-center">Find answers to commonly asked questions about our society.</p>
-      <ul className="m-8 bg-[#FAFDFA]">
-        {data.map((item, id) => (
-          <li key={item.id} className="border-b-2 px-4 mb-2 ">
-            <div className="flex items-center justify-between cursor-pointer" onClick={() => toggle(id)}>
-              <p className="font-semibold">{item.question}</p>
-              <span className="text-[#007300]">
-                {selected === id ? <FaCircleArrowDown /> : <FaCircleArrowRight />}
-              </span>
-              {' '}
-            </div>
-            <p className={`text-orange-600 ${selected === id ? 'block' : 'hidden ease-in duration-300'}`}>{item.answer}</p>
-          </li>
+    <section className='p-8 bg-[#f0f7f0]' name='faqs'>
+      <h2 className='text-center font-extrabold mb-4 '>FAQs</h2>
+      <p className='text-center text-base sm:text-xl mb-8'>
+        Find answers to commonly asked questions about our society.
+      </p>
+      <ul className='mx-auto w-full rounded-2xl bg-white p-6'>
+        {tempFaq.map((item, id) => (
+          <Disclosure>
+            {({ open }) => (
+              <>
+                <li key={id}>
+                  <Disclosure.Button
+                    className={`${
+                      open && "bg-[#F0F7FF] border-l-4 border-green-500"
+                    } flex justify-between w-full px-4 py-4 mb-4 text-xs sm:text-base font-semibold text-left text-green-900 bg-green-50 rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75`}
+                  >
+                    <span className='w-[75%]'>{item.question}</span>
+                    <ChevronDownIcon
+                      className={`${
+                        open ? "transform rotate-180" : ""
+                      } w-8 h-8 text-green-500`}
+                    />
+                  </Disclosure.Button>
+                  <Transition
+                    enter='transition duration-200 ease-in'
+                    enterFrom='transform scale-95 opacity-0'
+                    enterTo='transform scale-100 opacity-100'
+                    leave='transition duration-100 ease-out'
+                    leaveFrom='transform scale-100 opacity-100'
+                    leaveTo='transform scale-95 opacity-0'
+                  >
+                    <Disclosure.Panel className='px-4 pt-2 pb-6 text-sm text-gray-500'>
+                      {item.answer}
+                    </Disclosure.Panel>
+                  </Transition>
+                </li>
+              </>
+            )}
+          </Disclosure>
         ))}
       </ul>
     </section>

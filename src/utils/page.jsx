@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 
-import committeeDetails from "./committeeDetails";
+import committeeDetails from "../data/committeeDetails";
 
 import { MailIcon } from "../assets/icons";
 

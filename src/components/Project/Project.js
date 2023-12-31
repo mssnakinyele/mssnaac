@@ -4,7 +4,7 @@ import {
 } from 'react-router-dom';
 
 import styles from '../Section/Section.module.css';
-import data from '../../utils/projectData'; 
+import data from '../../data/projectData'; 
 
 function Project() {
   return (

@@ -7,23 +7,23 @@ import {
   Testimonials,
   Press,
   Project,
+  Donate,
   Faq,
-  Contact,
 } from "../../components";
 
 import styles from "./Home.module.css";
 
 function Home() {
   return (
-    <main className={styles.main}>
+    <main className={`${styles.main}`}>
       <Showcase />
       <Section />
       <Location />
       <Testimonials />
       <Press />
-      <Project />
+      {/* <Project /> */}
+      <Donate />
       <Faq />
-      <Contact />
     </main>
   );
 }
