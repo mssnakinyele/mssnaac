@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { animateScroll } from "react-scroll";
 
@@ -8,10 +8,11 @@ const App = () => {
   const location = useLocation();
 
   useEffect(() => {
-    animateScroll.scrollToTop({
-      duration: 1500,
-      smooth: "easeInOutQuart",
-    });
+    if (location.pathname !== "/")
+      animateScroll.scrollToTop({
+        duration: 1500,
+        smooth: "easeInOutQuart",
+      });
   }, [location.pathname]);
 
   return (

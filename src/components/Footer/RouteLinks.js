@@ -1,21 +1,29 @@
-import React from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
-import { Link as ScrollLink, scroller } from "react-scroll";
+import React, { useEffect } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { scroller } from "react-scroll";
+
+import SlideIn from "../Animations/SlideIn";
 
 import styles from "./Footer.module.css";
 
 const RouteLinks = () => {
+  const [scrollToFAQs, setScrollToFAQs] = React.useState(false);
+
   const navigate = useNavigate();
 
-  const ScrollToFAQs = () => {
-    navigate("/", {
-      state: { scrollToFAQs: true },
-    });
+  useEffect(() => {
+    if (scrollToFAQs) {
+      scroller.scrollTo("faqs", {
+        smooth: true,
+        duration: 1500,
+      });
+    }
+  }, [scrollToFAQs]);
 
-    scroller.scrollTo("faqs", {
-      smooth: true,
-      duration: 1500,
-      // containerId: "faqs",
+  const ScrollToFAQs = () => {
+    setScrollToFAQs(true);
+    navigate("/", {
+      state: { scrollToFAQs },
     });
   };
 
@@ -23,7 +31,7 @@ const RouteLinks = () => {
     <>
       <hr className='block sm:hidden mt-4 border-b-[1.5px]' />
 
-      <div className={styles.LinksContainer}>
+      <SlideIn from='left' classNames={styles.LinksContainer}>
         <NavLink
           className={({ isActive }) => (isActive ? "active" : null)}
           to='/'
@@ -48,10 +56,10 @@ const RouteLinks = () => {
         >
           Projects
         </NavLink>
-      </div>
+      </SlideIn>
       <hr className='block sm:hidden border-b-[1.5px]' />
 
-      <div className={styles.LinksContainer}>
+      <SlideIn from='right' classNames={styles.LinksContainer}>
         <NavLink
           className={({ isActive }) => (isActive ? "active" : null)}
           to='/society'
@@ -76,10 +84,10 @@ const RouteLinks = () => {
         >
           Member Login
         </NavLink>
-      </div>
+      </SlideIn>
       <hr className='block sm:hidden border-b-[1.5px]' />
 
-      <div className={styles.LinksContainer}>
+      <SlideIn from='left' classNames={styles.LinksContainer}>
         <NavLink
           className={({ isActive }) => (isActive ? "active" : null)}
           to='/photo-gallery'
@@ -101,7 +109,7 @@ const RouteLinks = () => {
         >
           Privacy Policy
         </NavLink>
-      </div>
+      </SlideIn>
     </>
   );
 };
