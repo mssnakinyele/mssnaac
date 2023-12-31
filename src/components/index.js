@@ -5,8 +5,9 @@ import Location from "./Location/Location";
 import Testimonials from "./Testimonials/Testimonials";
 import Press from "./Press/Press";
 import Project from "./Project/Project";
+import Donate from "./Donate";
 import Faq from "./Faq/Faq";
-import Contact from "./Contact/Contact";
+import Footer from "./Footer";
 
 export {
   Navbar,
@@ -16,6 +17,7 @@ export {
   Testimonials,
   Press,
   Project,
+  Donate,
   Faq,
-  Contact,
+  Footer,
 };
