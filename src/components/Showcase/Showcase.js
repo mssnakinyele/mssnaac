@@ -1,6 +1,7 @@
+import React from "react";
+
 import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
-
 import TypingText from "../TypingText";
 
 import styles from "./Showcase.module.css";

@@ -33,10 +33,10 @@ function Faq() {
       <SlideIn from='right' classNames='text-center'>
         <ul className='mx-auto w-full rounded-2xl bg-white p-6'>
           {tempFaq.map((item, id) => (
-            <Disclosure>
+            <Disclosure key={id}>
               {({ open }) => (
                 <>
-                  <li key={id}>
+                  <li>
                     <Disclosure.Button
                       className={`${
                         open && "bg-[#F0F7FF] border-l-4 border-green-500"

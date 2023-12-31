@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
-import { Link as ScrollLink, scroller } from "react-scroll";
+import { NavLink, useNavigate } from "react-router-dom";
+import { scroller } from "react-scroll";
 
 import SlideIn from "../Animations/SlideIn";
 

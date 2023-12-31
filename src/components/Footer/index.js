@@ -40,7 +40,7 @@ function Footer() {
         <RouteLinks />
         <hr className='block border-b-[1.5px] sm:mt-4 sm:col-span-4' />
         <SlideIn from='bottom' classNames=' sm:col-span-4'>
-          <p class='mt-5 text-center text-sm leading-6 text-slate-500'>
+          <p className='mt-5 text-center text-sm leading-6 text-slate-500'>
             © MSSNAAC {year}. All rights reserved.
           </p>
         </SlideIn>

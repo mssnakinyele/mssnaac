@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import { motion, useInView } from "framer-motion";
 
-import { useRef } from "react";
+import React, { useRef } from "react";
 
 const SlideIn = ({ classNames, from, children }) => {
   const ref = useRef(null);
