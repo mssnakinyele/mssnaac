@@ -40,13 +40,13 @@ function Faq() {
                     <Disclosure.Button
                       className={`${
                         open && "bg-[#F0F7FF] border-l-4 border-green-500"
-                      } flex justify-between w-full px-4 py-4 mb-4 text-xs sm:text-base font-semibold text-left text-green-900 bg-green-50 rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75`}
+                      } flex justify-between w-full px-4 py-4 mb-4 text-[0.65rem] sm:text-base font-semibold text-left text-green-900 bg-green-50 rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75`}
                     >
                       <span className='w-[75%]'>{item.question}</span>
                       <ChevronDownIcon
                         className={`${
                           open ? "transform rotate-180" : ""
-                        } w-8 h-8 text-green-500`}
+                        } w-6 h-6 text-green-500`}
                       />
                     </Disclosure.Button>
                     <Transition
@@ -57,7 +57,7 @@ function Faq() {
                       leaveFrom='transform scale-100 opacity-100'
                       leaveTo='transform scale-95 opacity-0'
                     >
-                      <Disclosure.Panel className='px-4 pt-2 pb-6 text-sm text-gray-500'>
+                      <Disclosure.Panel className='px-4 pt-2 pb-6 text-xs sm:text-sm text-gray-500'>
                         {item.answer}
                       </Disclosure.Panel>
                     </Transition>
