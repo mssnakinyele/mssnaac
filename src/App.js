@@ -16,7 +16,7 @@ const App = () => {
   }, [location.pathname]);
 
   return (
-    <div className='App'>
+    <div className='App overflow-hidden'>
       <Routes>
         <Route path='/' element={<MainLayout />}>
           <Route index element={<Home />} />
