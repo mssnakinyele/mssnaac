@@ -11,14 +11,16 @@ import tempData from "../../data/testimonialData";
 function Testimonials() {
   return (
     <section className={`${styles.testimony} mt-4 py-[3rem]`}>
-      <SlideIn from='left'>
-        <h2 className='text-3xl lg:text-4xl font-bold'>Testimonials</h2>
-      </SlideIn>
-      <SlideIn from='right'>
-        <p className='text-sm lg:text-lg px-4'>
-          Hear from individuals who value being part of our society.
-        </p>
-      </SlideIn>
+      <div className="px-[1.5rem]">
+        <SlideIn from='left'>
+          <h2 className='text-3xl lg:text-4xl font-bold'>Testimonials</h2>
+        </SlideIn>
+        <SlideIn from='right'>
+          <p className='text-sm lg:text-lg px-4 my-4'>
+            Hear from individuals who value being part of our society.
+          </p>
+        </SlideIn>
+      </div>
       <CustomSlider config={{ type: "testimonial" }}>
         {tempData.map((item) => (
           <div key={uuid()} className={styles.card}>

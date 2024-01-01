@@ -11,7 +11,7 @@ function Footer() {
     <footer className=' bg-[#007300] text-white p-[2.25rem] text-center'>
       <section className='flex flex-row justify-between items-center gap-8 '>
         <SlideIn from='left' classNames='flex flex-col sm:basis-1/2'>
-          <header className='font-extrabold text-4xl mb-4 text-left'>
+          <header className='font-extrabold text-3xl mb-4 text-left'>
             Contact Us
           </header>
           <ContactLinks />
@@ -46,7 +46,7 @@ function Footer() {
         <RouteLinks />
         <hr className='block border-b-[1.5px] sm:mt-4 col-span-3 sm:col-span-4' />
         <SlideIn from='bottom' classNames='col-span-3 sm:col-span-4'>
-          <p className='mt-5 text-center text-sm leading-6 text-slate-500'>
+          <p className='mt-5 text-center text-xs sm:text-sm leading-6 text-slate-500'>
             © MSSNAAC {year}. All rights reserved.
           </p>
         </SlideIn>
