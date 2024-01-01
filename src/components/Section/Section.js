@@ -29,7 +29,7 @@ function Section() {
         </Link>
       </div>
       <div>
-        <img src="akinyele.png" alt="Society Banner" />
+        <img src="/imgs/akinyele.png" alt="Society Banner" />
       </div>
     </section>
   );

@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import ReactPaginate from 'react-paginate';
-import CommitteeDetailss from './index';
-import { MailIcon } from '../ui/svg';
+import React, { useState, useEffect } from "react";
+import ReactPaginate from "react-paginate";
+
+import committeeDetails from "./committeeDetails";
+
+import { MailIcon } from "../assets/icons";
 
 function Items({ currentItems }) {
   return (
-    <div className="grid grid-cols-4 gap-8">
+    <div className='grid grid-cols-4 gap-8'>
       {currentItems.map((detail) => (
         <div key={detail.post}>
           <div
@@ -14,16 +16,16 @@ function Items({ currentItems }) {
             {detail.icon}
           </div>
 
-          <div className="bg-white py-[21px] px-[17px] shadow-lg rounded-md">
-            <div className="flex justify-between items-center  pb-3">
-              <p className="text-lg font-bold text-brand-black">
+          <div className='bg-white py-[21px] px-[17px] shadow-lg rounded-md'>
+            <div className='flex justify-between items-center  pb-3'>
+              <p className='text-lg font-bold text-brand-black'>
                 {detail.name}
               </p>
-              <div className="cursor-pointer">
+              <div className='cursor-pointer'>
                 <MailIcon />
               </div>
             </div>
-            <p className="text-sm font-medium text-brand-black">
+            <p className='text-sm font-medium text-brand-black'>
               {detail.post}
             </p>
           </div>
@@ -41,13 +43,14 @@ const Page = ({ itemsPerPage }) => {
   useEffect(() => {
     // Fetch items from another resources.
     const endOffset = itemOffset + itemsPerPage;
-    setCurrentItems(CommitteeDetailss.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(CommitteeDetailss.length / itemsPerPage));
+    setCurrentItems(committeeDetails.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(committeeDetails.length / itemsPerPage));
   }, [itemOffset, itemsPerPage]);
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % CommitteeDetailss.length;
+    const newOffset =
+      (event.selected * itemsPerPage) % committeeDetails.length;
     setItemOffset(newOffset);
   };
 
@@ -55,24 +58,23 @@ const Page = ({ itemsPerPage }) => {
     <>
       <Items currentItems={currentItems} />
       <ReactPaginate
-        nextLabel="Next"
+        nextLabel='Next'
         onPageChange={handlePageClick}
         pageRangeDisplayed={3}
         marginPagesDisplayed={2}
         pageCount={pageCount}
-        previousLabel="Prev"
-        pageClassName="number-item"
-        pageLinkClassName="number-link"
-        previousClassName="prev-item"
-        previousLinkClassName="prev-link"
-        nextClassName="next-item"
-        nextLinkClassName="next-link"
-        containerClassName="pagination"
+        previousLabel='Prev'
+        pageClassName='number-item'
+        pageLinkClassName='number-link'
+        previousClassName='prev-item'
+        previousLinkClassName='prev-link'
+        nextClassName='next-item'
+        nextLinkClassName='next-link'
+        containerClassName='pagination'
         renderOnZeroPageCount={null}
       />
     </>
   );
 };
-
 
 export default Page;

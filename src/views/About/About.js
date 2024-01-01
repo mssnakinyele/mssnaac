@@ -1,13 +1,13 @@
 import React from 'react';
-import Title from './Title';
-import Page from '../../utils/page';
-import Navbar from '../Navbar';
-import Contact from '../Home/Contact';
+
+import Title from './Title'
+import Page from '../../utils/page'
+import {Contact} from '../../components'
+
 
 function About() {
   return (
     <>
-      <Navbar />
       <div className="bg-brand-green flex justify-between items-center gap-32 pl-[50px] py-12">
         <div className=" flex-1">
           <Title
@@ -22,7 +22,7 @@ function About() {
           />
         </div>
 
-        <img src="mssn1.png" alt="mssn" />
+        <img src="/imgs/mssn1.png" alt="mssn" />
       </div>
 
       <div className="flex justify-center items-center gap-40 pl-[50px] py-[58px]">
@@ -36,7 +36,7 @@ function About() {
 
         <div className="flex-1">
           <img
-            src="Activities.png"
+            src="/imgs/Activities.png"
             alt="Activites"
             className="object-contain"
           />
@@ -67,7 +67,7 @@ function About() {
           </button>
         </div>
 
-        <img src="Member.png" alt="Activites" className="object-contain" />
+        <img src="/imgs/Member.png" alt="Activites" className="object-contain" />
       </div>
       <Contact />
     </>

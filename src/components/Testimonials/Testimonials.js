@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { v4 as uuid } from 'uuid';
 
 import styles from './Testimonials.module.css';
@@ -29,7 +28,7 @@ function Testimonials() {
       myArray.map((item) => (
         <div key={uuid()} className={styles.card}>
           <div className={styles.icon}>
-            <img src="microphone.svg" alt="icon" />
+            <img src="/svgs/microphone.svg" alt="icon" />
           </div>
           <h3>{item.name}</h3>
           <p>{item.description}</p>

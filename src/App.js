@@ -1,21 +1,17 @@
-import {
-  Routes,
-  Route,
-} from 'react-router-dom';
-import Home from './components/Home/Home';
-import About from './components/About/about';
-import Donate from './components/Donate/Donate';
-import Detail from './components/Donate/Detail';
+import { Routes, Route } from "react-router-dom";
 
-// eslint-disable-next-line react/prefer-stateless-function
+import { Home, About, Donate, Detail, MainLayout, Error404 } from "./views";
 
 const App = () => (
-  <div className="App">
+  <div className='App'>
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/donate" element={<Donate />} />
-      <Route path="/donate/details" element={<Detail />} />
+      <Route path='/' element={<MainLayout />}>
+        <Route index element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/donate' element={<Donate />} />
+        <Route path='/donate/details' element={<Detail />} />
+        <Route path='*' element={<Error404 />} />
+      </Route>
     </Routes>
   </div>
 );
