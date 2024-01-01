@@ -53,14 +53,14 @@ function Footer() {
       </section>
       <SlideIn from='bottom' classNames=' mt-6'>
         <p className='text-sm mt-6'>
-          Developed with <span className=' text-red-300'>❤️</span> by{" "}
+          Frontend developed with <span className=' text-red-300'>❤️</span> by{" "}
           <a
             href='https://github.com/brainy-bug'
             className=' text-sm text-red-200 underline '
           >
             Abdulrasheed
-          </a>{" "}
-          and{" "}
+          </a>{" "},
+          Backend: {" "}
           <a
             href='https://github.com/abdulhamiid'
             className=' text-sm text-red-200 underline'
