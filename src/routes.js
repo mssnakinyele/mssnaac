@@ -10,7 +10,7 @@ export const routes = [
     text: "About",
   },
   {
-    path: "/society",
+    path: "/societies",
     current: false,
     text: "Societies",
   },
@@ -20,7 +20,7 @@ export const routes = [
     text: "Donate",
   },
   {
-    path: "/contact",
+    path: "/contact-us",
     current: false,
     text: "Contact Us",
   },

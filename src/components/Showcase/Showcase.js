@@ -1,11 +1,11 @@
 import React from "react";
-
 import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
 import TypingText from "../TypingText";
 
 import styles from "./Showcase.module.css";
 import SlideIn from "../Animations/SlideIn";
+import { Link } from "react-router-dom";
 
 function Showcase() {
   const [ref, inView] = useInView({
@@ -39,9 +39,14 @@ function Showcase() {
               <br className='hidden lg:inline' />
               building a better future for the Ummah.
             </p>
-            <button type='button' className='btn-green rounded-md my-8 mx-auto'>
-              Join us
-            </button>
+            <Link to='/registration'>
+              <button
+                type='button'
+                className='btn-green rounded-md my-8 mx-auto'
+              >
+                Join us
+              </button>
+            </Link>
           </SlideIn>
           <SlideIn from='top'>
             <div className=' text-white w-full grid grid-cols-3 '>
