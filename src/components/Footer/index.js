@@ -51,7 +51,7 @@ function Footer() {
           </p>
         </SlideIn>
       </section>
-      <SlideIn from='bottom' classNames=' mt-6'>
+      {/* <SlideIn from='bottom' classNames=' mt-6'>
         <p className='text-sm mt-6'>
           Frontend developed with <span className=' text-red-300'>❤️</span> by{" "}
           <a
@@ -68,7 +68,7 @@ function Footer() {
             AbdulHamid
           </a>
         </p>
-      </SlideIn>
+      </SlideIn> */}
     </footer>
   );
 }
