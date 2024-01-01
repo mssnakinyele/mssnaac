@@ -9,7 +9,7 @@ import styles from "./Footer.module.css";
 const ContactLinks = () => {
   return (
     <>
-      <div className='text-base '>
+      <div className='text-sm'>
         <p className={styles.contact}>
           <PhoneIcon />
           <span>+234 807 330 2821</span>

@@ -29,9 +29,10 @@ const RouteLinks = () => {
 
   return (
     <>
-      <hr className='block sm:hidden mt-4 border-b-[1.5px]' />
-
-      <SlideIn from='left' classNames={styles.LinksContainer}>
+      <SlideIn
+        from='left'
+        classNames={`${styles.LinksContainer} col-start-1 col-end-2 sm:col-start-2 sm:col-end-3`}
+      >
         <NavLink
           className={({ isActive }) => (isActive ? "active" : null)}
           to='/'
@@ -57,9 +58,11 @@ const RouteLinks = () => {
           Projects
         </NavLink>
       </SlideIn>
-      <hr className='block sm:hidden border-b-[1.5px]' />
 
-      <SlideIn from='right' classNames={styles.LinksContainer}>
+      <SlideIn
+        from='right'
+        classNames={`${styles.LinksContainer} col-start-2 col-end-3 sm:col-start-3 sm:col-end-4 `}
+      >
         <NavLink
           className={({ isActive }) => (isActive ? "active" : null)}
           to='/society'
@@ -85,9 +88,10 @@ const RouteLinks = () => {
           Member Login
         </NavLink>
       </SlideIn>
-      <hr className='block sm:hidden border-b-[1.5px]' />
-
-      <SlideIn from='left' classNames={styles.LinksContainer}>
+      <SlideIn
+        from='left'
+        classNames={`${styles.LinksContainer} col-start-3 col-end-4 sm:col-start-4 sm:col-end-5`}
+      >
         <NavLink
           className={({ isActive }) => (isActive ? "active" : null)}
           to='/photo-gallery'
@@ -107,7 +111,7 @@ const RouteLinks = () => {
           className={({ isActive }) => (isActive ? "active" : null)}
           to='/privacy-policy'
         >
-          Privacy Policy
+          Privacy
         </NavLink>
       </SlideIn>
     </>
