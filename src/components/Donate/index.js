@@ -7,7 +7,7 @@ import SlideIn from "../Animations/SlideIn";
 const Donate = () => {
   return (
     <section
-      className={`bg-[#E1F2E1] mt-16 h-[35rem] sm:h-[25rem] px-6 md:px-12 flex flex-col sm:flex-row items-center justify-evenly`}
+      className={`bg-[#E1F2E1] mt-16 h-[35rem] sm:h-[18rem] px-6 md:px-12 flex flex-col sm:flex-row items-center justify-evenly`}
     >
       <SlideIn from='left' classNames='sm:block object-cover'>
         <img
