@@ -25,7 +25,7 @@ function Navbar() {
           <>
             <div className='absolute top-3 right-3 flex items-center md:hidden'>
               {/* Mobile menu button*/}
-              <Disclosure.Button className='relative inline-flex items-center justify-center rounded-md p-2 text-green hover:bg-green-950 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
+              <Disclosure.Button className='relative inline-flex items-center justify-center rounded-md p-2 text-green'>
                 <span className='absolute -inset-0.5' />
                 <span className='sr-only'>Open main menu</span>
                 {open ? (

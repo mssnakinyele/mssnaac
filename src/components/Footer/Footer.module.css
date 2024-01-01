@@ -2,7 +2,7 @@
   display: flex;
   /* align-items: flex-start; */
   margin-bottom: 0.25rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: left;
 }
 
@@ -44,6 +44,12 @@
 }
 
 .LinksContainer a {
-  font-size: 16px;
+  font-size: 12px;
   width: fit-content;
+}
+
+@media (min-width: 640px) {
+  .LinksContainer a {
+    font-size: 16px;
+  }
 }
