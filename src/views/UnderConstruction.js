@@ -1,15 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // import Navbar from "./Navbar";
 // import styles from "./error-page.module.css";
 
 const UnderConstruction = () => {
-  //   const { pathname } = useLocation();
+    const { pathname } = useLocation();
 
   return (
     <>
       <main className='grid min-h-full place-items-center text-gray-600 bg-[#daf2da] px-6 py-24 sm:py-32 lg:px-8 '>
         <div className={`text-center `}>
+          <p>
+            Requested URL: <span className='text-[#007300] '>{pathname}</span>
+          </p>
           <h1 className='mt-4 text-3xl font-bold tracking-tight text-[#007300] sm:text-5xl'>
             Page Under Construction
           </h1>
