@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
-import React, { useRef } from "react";
+import React from "react";
 
 const SlideIn = ({ classNames, from, children }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
 
   const variants = {
     visible: {
@@ -24,7 +26,7 @@ const SlideIn = ({ classNames, from, children }) => {
     <motion.div
       ref={ref}
       initial='hidden'
-      animate={isInView ? "visible" : "hidden"}
+      animate={inView ? "visible" : "hidden"}
       variants={variants}
       transition={{ duration: 0.5, ease: "easeInOut", delay: 0.3 }}
       className={classNames}

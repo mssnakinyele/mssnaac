@@ -8,8 +8,8 @@ import SlideIn from "../Animations/SlideIn";
 function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className=' bg-[#007300] text-white p-[2.25rem] text-center'>
-      <section className='flex flex-row justify-between items-center gap-8 '>
+    <footer className=' bg-[#007300] text-white p-[1.25rem] text-center'>
+      <section className='flex flex-row justify-between items-center gap-8 p-[1rem] '>
         <SlideIn from='left' classNames='flex flex-col sm:basis-1/2'>
           <header className='font-extrabold text-3xl mb-4 text-left'>
             Contact Us
@@ -28,7 +28,7 @@ function Footer() {
           </iframe>
         </SlideIn>
       </section>
-      <section className='rounded-md bg-white p-6 mt-12 text-black text-left text-base sm:text-3xl grid grid-cols-3 sm:grid-cols-4'>
+      <section className='rounded-md bg-white p-6 mt-8 text-black text-left text-base sm:text-3xl grid grid-cols-3 sm:grid-cols-4'>
         <SlideIn
           from='top'
           classNames='text-center my-auto col-span-3 sm:col-start-1 sm:col-end-2'
