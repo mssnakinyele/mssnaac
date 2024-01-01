@@ -11,6 +11,7 @@ const TypingText = ({ texts, wrapperClassName }) => {
           autoStart: true,
           loop: true,
           wrapperClassName: wrapperClassName,
+          delay: 200,
         }}
       />
     </div>

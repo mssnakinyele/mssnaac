@@ -16,27 +16,27 @@ const Donate = () => {
           className='w-[150px] sm:w-[250px]'
         />
       </SlideIn>
-      <SlideIn
-        from='right'
-        classNames='flex flex-col text-center items-center sm:text-left sm:items-start text-sm md:text-lg leading-0 w-auto sm:w-1/2'
-      >
-        <h2 className=' font-semibold text-3xl sm:text-4xl leading-normal'>
-          Give to the cause of Allah
-        </h2>
-
-        <p className=' my-4 text-base sm:text-lg '>
-          You can support our mission to promote a sense of community and
-          provide opportunities for Muslim students to connect and learn. Your
-          contribution can make a real difference.
-        </p>
-        <div>
+      <div className='flex flex-col text-center items-center sm:text-left sm:items-start text-sm md:text-lg leading-0 w-auto sm:w-1/2'>
+        <SlideIn from='left'>
+          <h2 className=' font-semibold text-3xl sm:text-4xl leading-normal'>
+            Give to the cause of Allah
+          </h2>
+        </SlideIn>
+        <SlideIn>
+          <p className=' my-4 text-base sm:text-lg '>
+            You can support our mission to promote a sense of community and
+            provide opportunities for Muslim students to connect and learn. Your
+            contribution can make a real difference.
+          </p>
+        </SlideIn>
+        <SlideIn from='right'>
           <Link to='/donate'>
             <button type='button' className='btn-green'>
               Donate now <ArrowRightIcon className='h-6 w-4 ml-2 font-bold' />
             </button>
           </Link>
-        </div>
-      </SlideIn>
+        </SlideIn>
+      </div>
     </section>
   );
 };

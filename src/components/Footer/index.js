@@ -28,18 +28,24 @@ function Footer() {
           </iframe>
         </SlideIn>
       </section>
-      <section className='rounded-md bg-white p-6 mt-12 text-black text-left text-base grid sm:grid-cols-4'>
-        <SlideIn from='top' classNames='text-center  my-auto'>
+      <section className='rounded-md bg-white p-6 mt-12 text-black text-left text-base sm:text-3xl grid grid-cols-3 sm:grid-cols-4'>
+        <SlideIn
+          from='top'
+          classNames='text-center my-auto col-span-3 sm:col-start-1 sm:col-end-2'
+        >
           <img
             src='/imgs/AAC_logo.png'
             alt='MSSN AAC Logo'
-            className='mx-auto'
+            className='mx-auto w-[100px] sm:w-auto'
           />
-          <p className='mx-auto'>The Hope of the Ummah...</p>
+          <p className='mx-auto text-sm sm:text-base'>
+            The Hope of the Ummah...
+          </p>
         </SlideIn>
+        <hr className='block sm:hidden mt-4 border-b-[1.5px] col-span-3' />
         <RouteLinks />
-        <hr className='block border-b-[1.5px] sm:mt-4 sm:col-span-4' />
-        <SlideIn from='bottom' classNames=' sm:col-span-4'>
+        <hr className='block border-b-[1.5px] sm:mt-4 col-span-3 sm:col-span-4' />
+        <SlideIn from='bottom' classNames='col-span-3 sm:col-span-4'>
           <p className='mt-5 text-center text-sm leading-6 text-slate-500'>
             © MSSNAAC {year}. All rights reserved.
           </p>

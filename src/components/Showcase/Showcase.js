@@ -27,7 +27,7 @@ function Showcase() {
               <TypingText
                 texts={["stronger", "resilient", "empowered"]}
                 wrapperClassName={styles.highlight}
-              />
+              />{" "}
               communities
               <br />
               of Muslim students
