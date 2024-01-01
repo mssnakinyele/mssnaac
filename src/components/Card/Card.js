@@ -22,7 +22,7 @@ function Card() {
         href='https://alfaaedahpress.wordpress.com/2023/04/03/uimc-holds-30th-annual-ramdan-lecture-discusses-on-the-excellence-and-mediocrity-of-the-ummah/'
         target='_blank'
         rel='noreferrer'
-        className='text-xs'
+        className='text-sm'
       >
         Read more
       </a>

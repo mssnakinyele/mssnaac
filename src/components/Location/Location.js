@@ -19,7 +19,7 @@ function Location() {
         </SlideIn>
       </SlideIn>
       <SlideIn from='left'>
-        <p className='text-xs sm:text-base leading-normal'>
+        <p className='text-xs sm:text-base leading-normal my-4'>
           Institutions and Secondary school branches under MSSNAAC are situated
           in Akinyele Local Government.
         </p>

@@ -35,21 +35,18 @@ const CustomSlider = ({ config, children }) => {
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
-    speed:  config?.type === "testimonial" ? 3000 : 1000,
+    speed: config?.type === "testimonial" ? 3000 : 1000,
     autoplay: config?.type === "testimonial" ? true : false,
     autoplaySpeed: 0,
     cssEase: config?.type === "testimonial" ? "linear" : "ease-in-out",
-    // adaptiveHeight: true,
     swipeToSlide: true,
-    // nextArrow: <NextArrow />,
-    // prevArrow: <PrevArrow />,
+
     responsive: [
       {
         breakpoint: 1124,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          initialSlide: 3,
+          slidesToShow: 4,
+          slidesToScroll: 1,
         },
       },
       {
@@ -57,7 +54,7 @@ const CustomSlider = ({ config, children }) => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2,
+          initialSlide: 1,
         },
       },
       {
