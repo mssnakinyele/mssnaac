@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { scroller } from "react-scroll";
 
-import SlideIn from "../Animations/SlideIn";
+import SlideIn from "../../animations/SlideIn";
 
 import styles from "./Footer.module.css";
 
-const RouteLinks = () => {
+const FooterRoutes = () => {
   const [scrollToFAQs, setScrollToFAQs] = React.useState(false);
 
   const navigate = useNavigate();
@@ -118,4 +118,4 @@ const RouteLinks = () => {
   );
 };
 
-export default RouteLinks;
+export default FooterRoutes;

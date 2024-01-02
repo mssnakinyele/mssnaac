@@ -2,16 +2,17 @@ import React from "react";
 import { v4 as uuid } from "uuid";
 import Avatar from "react-avatar";
 
-import styles from "./Testimonials.module.css";
-import CustomSlider from "../Slider/CustomSlider";
-import SlideIn from "../Animations/SlideIn";
+import styles from "../styles/Testimonials.module.css";
+import Slider from "../../../components/Slider";
 
-import tempData from "../../data/testimonialData";
+import SlideIn from "../../../animations/SlideIn";
+
+import tempData from "../../../data/testimonials-data";
 
 function Testimonials() {
   return (
     <section className={`${styles.testimony} mt-4 py-[3rem]`}>
-      <div className="px-[1.5rem]">
+      <div className='px-[1.5rem]'>
         <SlideIn from='left'>
           <h2 className='text-3xl lg:text-4xl font-bold'>Testimonials</h2>
         </SlideIn>
@@ -21,7 +22,7 @@ function Testimonials() {
           </p>
         </SlideIn>
       </div>
-      <CustomSlider config={{ type: "testimonial" }}>
+      <Slider config={{ type: "testimonial", slidesToShow: 3 }}>
         {tempData.map((item) => (
           <div key={uuid()} className={styles.card}>
             <Avatar
@@ -35,7 +36,7 @@ function Testimonials() {
             <p>{item.description2}</p>
           </div>
         ))}
-      </CustomSlider>
+      </Slider>
     </section>
   );
 }

@@ -1,9 +1,10 @@
 import React from "react";
 
-import RouteLinks from "./RouteLinks";
-import ContactLinks from "./ContactLinks";
+import FooterRoutes from "./FooterRoutes";
+import ContactDetails from "./ContactDetails";
+import Map from "../Map";
 
-import SlideIn from "../Animations/SlideIn";
+import SlideIn from "../../animations/SlideIn";
 
 function Footer() {
   const year = new Date().getFullYear();
@@ -14,18 +15,13 @@ function Footer() {
           <header className='font-extrabold text-3xl mb-4 text-left'>
             Contact Us
           </header>
-          <ContactLinks />
+          <ContactDetails />
         </SlideIn>
         <SlideIn
           from='right'
           classNames=' basis-1/2 rounded-t-2xl hidden sm:block h-[300px]'
         >
-          <iframe
-            src='https://maps.google.com/maps?width=520&amp;height=200&amp;hl=en&amp;q=J28%20alaka%20orogun%20Ibadan+(MSSN%20Akinyele%20Area%20Council)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed'
-            title='MSSN AAC Address'
-          >
-            <a href='https://www.maps.ie/population/'>Population mapping</a>
-          </iframe>
+       <Map />
         </SlideIn>
       </section>
       <section className='rounded-md bg-white p-6 mt-8 text-black text-left text-base sm:text-3xl grid grid-cols-3 sm:grid-cols-4'>
@@ -43,7 +39,7 @@ function Footer() {
           </p>
         </SlideIn>
         <hr className='block sm:hidden mt-4 border-b-[1.5px] col-span-3' />
-        <RouteLinks />
+        <FooterRoutes />
         <hr className='block border-b-[1.5px] sm:mt-4 col-span-3 sm:col-span-4' />
         <SlideIn from='bottom' classNames='col-span-3 sm:col-span-4'>
           <p className='mt-5 text-center text-xs sm:text-sm leading-6 text-slate-500'>

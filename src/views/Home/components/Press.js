@@ -1,9 +1,8 @@
 import React from "react";
-import styles from "./Press.module.css";
-import Card from "../Card/Card";
-// import CustomSlider from "../Slider/CustomSlider";
 
-import SlideIn from "../Animations/SlideIn";
+import SlideIn from "../../../animations/SlideIn";
+import Card from "../../../components/Card";
+import styles from "../styles/Press.module.css";
 
 function Press() {
   return (
@@ -12,7 +11,9 @@ function Press() {
         className={`${styles.press} flex flex-col sm:flex-row sm:justify-between sm:items-center  p-[2.25rem] `}
       >
         <SlideIn from='left'>
-          <h2 className='text-3xl lg:text-4xl font-bold my-2'>Al-Faaedah Press</h2>
+          <h2 className='text-3xl lg:text-4xl font-bold my-2'>
+            Al-Faaedah Press
+          </h2>
         </SlideIn>
 
         <SlideIn classNames='flex items-center justify-between w-full mt-4 sm:flex-col sm:w-1/4 sm:justify-center gap-2 sm:items-start'>
@@ -37,7 +38,6 @@ function Press() {
       <SlideIn from='bottom' classNames=' overflow-x-scroll md:px-[2.25rem]'>
         <div className=' w-[1200px] mx-auto mt-3 flex gap-[25px]'>
           {/* <div > */}
-          <Card />
           <Card />
           <Card />
           <Card />

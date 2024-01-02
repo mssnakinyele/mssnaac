@@ -1,7 +1,5 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-// import Navbar from "./Navbar";
-// import styles from "./error-page.module.css";
 
 const UnderConstruction = () => {
     const { pathname } = useLocation();
