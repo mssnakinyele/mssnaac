@@ -12,6 +12,7 @@ import {
 } from "./components";
 
 import styles from "./styles/Home.module.css";
+import VolunteerSection from "./components/VolunteerSection";
 
 function Home() {
   return (
@@ -23,6 +24,7 @@ function Home() {
       <Press />
       <ProjectSection />
       <DonateSection />
+      <VolunteerSection />
       <Faqs />
     </main>
   );
