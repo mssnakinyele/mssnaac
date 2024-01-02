@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
-import SlideIn from "../Animations/SlideIn";
+import SlideIn from "../../../animations/SlideIn";
 
-const Donate = () => {
+const DonateSection = () => {
   return (
     <section
-      className={`bg-[#E1F2E1] mt-16 h-[35rem] sm:h-[18rem] px-6 md:px-12 flex flex-col sm:flex-row items-center justify-evenly`}
+      className={`bg-[#E1F2E1] mt-16 h-[35rem] sm:h-[30rem] px-6 md:px-12 flex flex-col sm:flex-row items-center justify-evenly`}
     >
       <SlideIn from='left' classNames='sm:block object-cover'>
         <img
@@ -41,4 +41,4 @@ const Donate = () => {
   );
 };
 
-export default Donate;
+export default DonateSection;

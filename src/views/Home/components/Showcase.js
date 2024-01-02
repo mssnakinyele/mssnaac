@@ -1,11 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
-import TypingText from "../TypingText";
 
-import styles from "./Showcase.module.css";
-import SlideIn from "../Animations/SlideIn";
-import { Link } from "react-router-dom";
+import Typewriter from "../../../animations/Typewriter";
+import SlideIn from "../../../animations/SlideIn";
+import styles from "../styles/Showcase.module.css";
 
 function Showcase() {
   const [ref, inView] = useInView({
@@ -24,7 +24,7 @@ function Showcase() {
               className={`${styles.h1} text-3xl lg:text-5xl md:text-4xl lg:leading-normal`}
             >
               Building{" "}
-              <TypingText
+              <Typewriter
                 texts={["stronger", "resilient", "empowered"]}
                 wrapperClassName={styles.highlight}
               />{" "}

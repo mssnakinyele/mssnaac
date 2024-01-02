@@ -2,7 +2,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 
-const TypingText = ({ texts, wrapperClassName }) => {
+const Writer = ({ texts, wrapperClassName }) => {
   return (
     <div className=' inline-block'>
       <Typewriter
@@ -18,4 +18,4 @@ const TypingText = ({ texts, wrapperClassName }) => {
   );
 };
 
-export default TypingText;
+export default Writer;

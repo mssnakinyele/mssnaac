@@ -5,7 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import { Disclosure, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-import SlideIn from "../Animations/SlideIn";
+import SlideIn from "../../animations/SlideIn";
 
 import { routes } from "../../routes";
 import styles from "./Navbar.module.css";

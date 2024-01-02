@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import styles from "./Section.module.css";
-import SlideIn from "../Animations/SlideIn";
+import SlideIn from "../../../animations/SlideIn";
 
-function Section() {
+import styles from "../styles/AboutSection.module.css";
+
+function AboutSection() {
   return (
     <section className={`${styles.about} bg-[#f0f7f0] h-[30rem] px-6 md:px-12`}>
       <div className='flex justify-between items-center'>
@@ -51,4 +52,4 @@ function Section() {
   );
 }
 
-export default Section;
+export default AboutSection;

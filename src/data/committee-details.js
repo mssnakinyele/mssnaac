@@ -18,7 +18,7 @@ import {
   PROIcon,
   SecBus,
   SocWel,
-} from "../assets/icons";
+} from "../icons";
 
 const commiteeDetails = [
   {
@@ -204,5 +204,4 @@ const commiteeDetails = [
   },
 ];
 
-export default commiteeDetails
-;
+export default commiteeDetails;

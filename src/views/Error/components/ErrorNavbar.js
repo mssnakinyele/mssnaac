@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function ErrorNavbar() {
   return (
     <nav className=' p-4 fixed w-[100%]'>
       <Link to='/'>
@@ -11,4 +11,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default ErrorNavbar;

@@ -6,7 +6,9 @@ import { FiInstagram } from "react-icons/fi";
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/solid";
 
 import styles from "./Footer.module.css";
-const ContactLinks = () => {
+
+const ContactDetails
+ = () => {
   return (
     <>
       <div className='text-sm'>
@@ -52,4 +54,5 @@ const ContactLinks = () => {
   );
 };
 
-export default ContactLinks;
+export default ContactDetails
+;

@@ -1,14 +1,15 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import Navbar from "./Navbar";
-import styles from "./error-page.module.css";
+
+import ErrorNavbar from "./ErrorNavbar";
+import styles from "../styles/error-page.module.css";
 
 const Error404 = () => {
   const { pathname } = useLocation();
 
   return (
     <>
-      <Navbar />
+      <ErrorNavbar />
       <main className='grid min-h-[100vh] place-items-center text-gray-600 bg-[#daf2da] px-6 py-24 sm:py-32 lg:px-8 '>
         <div className={`${styles.content} text-center `}>
           <p>

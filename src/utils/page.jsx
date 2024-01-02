@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 
-import committeeDetails from "../data/committeeDetails";
+import committeeDetails from "../data/committee-details";
 
-import { MailIcon } from "../assets/icons";
+import { MailIcon } from "../icons";
 
 function Items({ currentItems }) {
   return (

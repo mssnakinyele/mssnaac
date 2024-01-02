@@ -5,10 +5,10 @@ import { scroller } from "react-scroll";
 import { Disclosure, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
-import tempFaq from "../../data/faq";
-import SlideIn from "../Animations/SlideIn";
+import SlideIn from "../../../animations/SlideIn";
+import tempFaq from "../../../data/faqs-data";
 
-function Faq() {
+function Faqs() {
   const location = useLocation();
 
   useEffect(() => {
@@ -72,4 +72,4 @@ function Faq() {
   );
 }
 
-export default Faq;
+export default Faqs;
