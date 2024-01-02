@@ -6,7 +6,7 @@ import {
   LocationSection,
   Testimonials,
   Press,
-  // ProjectSection,
+  ProjectSection,
   DonateSection,
   Faqs,
 } from "./components";
@@ -21,7 +21,7 @@ function Home() {
       <LocationSection />
       <Testimonials />
       <Press />
-      {/* <ProjectSection /> */}
+      <ProjectSection />
       <DonateSection />
       <Faqs />
     </main>

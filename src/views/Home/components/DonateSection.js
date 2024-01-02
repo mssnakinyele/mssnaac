@@ -7,13 +7,13 @@ import SlideIn from "../../../animations/SlideIn";
 const DonateSection = () => {
   return (
     <section
-      className={`bg-[#E1F2E1] mt-16 h-[35rem] sm:h-[30rem] px-6 md:px-12 flex flex-col sm:flex-row items-center justify-evenly`}
+      className={`bg-[#E1F2E1] mt-6 h-[35rem] sm:h-[30rem] px-6 md:px-12 flex flex-col sm:flex-row items-center justify-evenly`}
     >
       <SlideIn from='left' classNames='sm:block object-cover'>
         <img
           src='/imgs/money.png'
           alt='Money'
-          className='w-[150px] sm:w-[250px]'
+          className='w-[150px] sm:w-[280px]'
         />
       </SlideIn>
       <div className='flex flex-col text-center items-center sm:text-left sm:items-start text-sm md:text-lg leading-0 w-auto sm:w-1/2'>

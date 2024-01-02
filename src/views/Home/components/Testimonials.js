@@ -22,7 +22,7 @@ function Testimonials() {
           </p>
         </SlideIn>
       </div>
-      <Slider config={{ type: "testimonial" }}>
+      <Slider config={{ type: "testimonial", slidesToShow: 3 }}>
         {tempData.map((item) => (
           <div key={uuid()} className={styles.card}>
             <Avatar

@@ -42,7 +42,6 @@ function Press() {
           <Card />
           <Card />
           <Card />
-          <Card />
           {/* </div> */}
         </div>
       </SlideIn>

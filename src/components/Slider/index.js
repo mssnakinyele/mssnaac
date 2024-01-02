@@ -1,41 +1,41 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-// import {
-//   ArrowRightCircleIcon,
-//   ArrowLeftCircleIcon,
-// } from "@heroicons/react/24/solid";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 import Slider from "react-slick";
 
 const CustomSlider = ({ config, children }) => {
-  // const NextArrow = (props) => {
-  //   return (
-  //     <ArrowRightCircleIcon
-  //       className={`${props.className} ${
-  //         config?.type === "testimonial" ? "hidden" : "block"
-  //       }`}
-  //       onClick={props.onClick}
-  //     />
-  //   );
-  // };
-  // const PrevArrow = (props) => {
-  //   return (
-  //     <ArrowLeftCircleIcon
-  //       className={`${props.className}  ${
-  //         config?.type === "testimonial" ? "hidden" : "block"
-  //       }`}
-  //       onClick={props.onClick}
-  //     />
-  //   );
-  // };
+  const NextArrow = (props) => {
+    console.log(props.onClick);
+    return (
+      <div>
+        <HiChevronRight
+          className={`${props.className} ${
+            config?.type === "testimonial" ? "hidden" : "block"
+          }`}
+          onClick={props.onClick}
+        />
+      </div>
+    );
+  };
+  const PrevArrow = (props) => {
+    return (
+      <HiChevronLeft
+        className={`${props.className}  ${
+          config?.type === "testimonial" ? "hidden" : "block"
+        }`}
+        onClick={props.onClick}
+      />
+    );
+  };
 
   const settings = {
-    // dots: config?.type === "testimonial" ? false : true,
+    dots: config?.type === "testimonial" ? false : true,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: config?.slidesToShow,
     slidesToScroll: 1,
     initialSlide: 0,
-    speed: config?.type === "testimonial" ? 3000 : 1000,
+    speed: config?.type === "testimonial" ? 4000 : 1500,
     autoplay: config?.type === "testimonial" ? true : false,
     autoplaySpeed: 0,
     cssEase: config?.type === "testimonial" ? "linear" : "ease-in-out",
@@ -45,14 +45,14 @@ const CustomSlider = ({ config, children }) => {
       {
         breakpoint: 1124,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: config?.slidesToShow,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 800,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: config?.type === "testimonial" ? 2 : 1,
           slidesToScroll: 2,
           initialSlide: 1,
         },
@@ -65,10 +65,12 @@ const CustomSlider = ({ config, children }) => {
         },
       },
     ],
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
 
   return (
-    <Slider {...settings} className='slider'>
+    <Slider {...settings} className={`slider ${config?.type} `}>
       {children}
     </Slider>
   );
