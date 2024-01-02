@@ -31,7 +31,7 @@ const DonateSection = () => {
         </SlideIn>
         <SlideIn from='right'>
           <Link to='/donate'>
-            <button type='button' className='btn-green'>
+            <button type='button' className='btn-green my-4'>
               Donate now <ArrowRightIcon className='h-6 w-4 ml-2 font-bold' />
             </button>
           </Link>
