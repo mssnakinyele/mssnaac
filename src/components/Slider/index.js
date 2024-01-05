@@ -6,7 +6,6 @@ import Slider from "react-slick";
 
 const CustomSlider = ({ config, children }) => {
   const NextArrow = (props) => {
-    console.log(props.onClick);
     return (
       <div>
         <HiChevronRight

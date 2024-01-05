@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
+import { scroller } from "react-scroll";
 
 import committeeDetails from "../../data/committee-details";
 
 import Items from "./Items";
+import SlideIn from "../../animations/SlideIn";
 
 const Pagination = ({ itemsPerPage }) => {
   const [currentItems, setCurrentItems] = useState([]);
@@ -22,17 +24,21 @@ const Pagination = ({ itemsPerPage }) => {
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % committeeDetails.length;
     setItemOffset(newOffset);
+    scroller.scrollTo("paginate-heading", {
+      smooth: true,
+      duration: 1500,
+    });
   };
 
   return (
     <>
-      <Items currentItems={currentItems} />
+      <SlideIn from='bottom'>
+        <Items currentItems={currentItems} />
+      </SlideIn>
       <ReactPaginate
         nextLabel='Next'
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={3}
-        marginPagesDisplayed={2}
         pageCount={pageCount}
+        onPageChange={handlePageClick}
         previousLabel='Prev'
         pageClassName='number-item'
         pageLinkClassName='number-link'
@@ -40,8 +46,10 @@ const Pagination = ({ itemsPerPage }) => {
         previousLinkClassName='prev-link'
         nextClassName='next-item'
         nextLinkClassName='next-link'
+        activeLinkClassName='active-link'
+        activeClassName='active'
         containerClassName='pagination'
-        renderOnZeroPageCount={null}
+        disabledLinkClassName='disabled'
       />
     </>
   );
