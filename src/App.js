@@ -4,7 +4,7 @@ import { animateScroll } from "react-scroll";
 
 import {
   Home,
-  // About,
+  About,
   // Donation,
   // Detail,
   MainLayout,
@@ -16,11 +16,10 @@ const App = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname !== "/")
-      animateScroll.scrollToTop({
-        duration: 1500,
-        smooth: "easeInOutQuart",
-      });
+    animateScroll.scrollToTop({
+      duration: 1500,
+      smooth: "easeInOutQuart",
+    });
   }, [location.pathname]);
 
   return (
@@ -28,7 +27,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<MainLayout />}>
           <Route index element={<Home />} />
-          <Route path='/about' element={<UnderConstruction />} />
+          <Route path='/about' element={<About />} />
           <Route path='/donate' element={<UnderConstruction />} />
           <Route path='/donate/details' element={<UnderConstruction />} />
           <Route path='/societies' element={<UnderConstruction />} />

@@ -28,7 +28,7 @@ function Testimonials() {
             <Avatar
               name={item.name}
               size='75'
-              round={true} // Set to true for a round avatar
+              round={true} // 
             />
             <h3>{item.name}</h3>
             <p>{item.description}</p>

@@ -7,9 +7,9 @@ const Title = ({
   <div>
     <h2 className="text-[35px] font-bold pb-3 font">{title}</h2>
     <div>
-      <p className="text-lg font-medium pb-4 leading-[50px]">{text}</p>
-      <p className="text-lg font-medium pb-4 leading-[50px]">{text2}</p>
-      <p className="text-lg font-medium leading-[50px]">{text3}</p>
+      <p className="text-base lg:text-[18px] font-medium pb-4 leading-[40px] lg:leading-[50px]">{text}</p>
+      <p className="text-base lg:text-[18px] font-medium pb-4 leading-[40px] lg:leading-[50px]">{text2}</p>
+      <p className="text-base lg:text-[18px] font-medium leading-[40px] lg:leading-[50px]">{text3}</p>
     </div>
   </div>
 );

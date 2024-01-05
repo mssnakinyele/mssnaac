@@ -59,7 +59,7 @@ function Showcase() {
                 />
                 <div className={styles.counter}>
                   <h2 ref={ref}>
-                    <CountUp end={inView ? 10 : 0} duration={2.5} />+
+                    <CountUp end={inView ? 10 : 0} duration={10.5} />+
                   </h2>
                   <p>
                     <span>Active</span>
