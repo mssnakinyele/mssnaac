@@ -24,25 +24,26 @@ const YearDropdown = () => {
           />
         </Menu.Button>
         <Menu.Items className='text-lg  absolute right-0 sm:left-0 mt-2 py-4 px-2 w-[8rem] rounded-md bg-white shadow-lg  focus:outline-none'>
-          {years.map((year, i) => {
-            return (
-              <Menu.Item
-                className='rounded-md  py-[2px] text-center  hover:bg-[#9bd79b] w-full '
-                key={i}
-              >
-                <button
-                  onClick={handleCurrentYear}
-                  className={`${
-                    currentYear === year
-                      ? "text-green-600 hover:text-black"
-                      : " text-black  "
-                  }`}
+          {years
+            .map((year, i) => {
+              return (
+                <Menu.Item
+                  className='rounded-md  py-[2px] text-center  hover:bg-[#9bd79b] w-full '
+                  key={i}
                 >
-                  {year}
-                </button>
-              </Menu.Item>
-            );
-          })}
+                  <button
+                    onClick={handleCurrentYear}
+                    className={`${
+                      currentYear === year
+                        ? "text-green-600 hover:text-black"
+                        : " text-black  "
+                    }`}
+                  >
+                    {year}
+                  </button>
+                </Menu.Item>
+              );
+            })}
         </Menu.Items>
       </Menu>
     </>

@@ -22,7 +22,7 @@ function About() {
                 text='“To establish an Islamic Ummah governed by the principles and rules of the Shariah within the next fifty years”'
               />
             </SlideIn>
-            <SlideIn from='right' className='my-4'>
+            <SlideIn from='right' classNames='my-4'>
               <Title
                 title='MSSN Mission'
                 text='“The MSSN will work relentlessly towards the establishment of a society that fosters all-round human development.'
@@ -37,7 +37,7 @@ function About() {
       <div className=' flex gap-[2rem] justify-between items-center p-12'>
         <SlideIn
           from='left'
-          className='text-justify sm:text-left max-w-[480px]'
+          classNames='text-justify sm:text-left max-w-[480px]'
         >
           <Title
             title='Our Activities'
@@ -45,18 +45,18 @@ function About() {
             text2='We provide educational support, organize events, and engage in community service to help spread the message of Islam while creating a positive impact in our community.'
           />
         </SlideIn>
-        <SlideIn from='right' className='hidden sm:block px-28 mx-auto '>
+        <SlideIn from='right' classNames='hidden sm:block px-28 mx-auto '>
           <img src='/imgs/activities.png' alt='activities-icon' />
         </SlideIn>
       </div>
 
       <div className='bg-[#f4faf4] pt-8' name='paginate-heading'>
-        <div className='flex items-center justify-center  pb-[50px]'>
+        <SlideIn from='top' classNames='flex items-center justify-center  pb-[50px]'>
           <h2 className='font-bold text-[25px] sm:text-[35px] text-center'>
             <span>MSSNAAC Executive Committee</span>
             <YearDropdown />
           </h2>
-        </div>
+        </SlideIn>
 
         <div className=' p-4 sm:px-16'>
           <Pagination itemsPerPage={8} />
